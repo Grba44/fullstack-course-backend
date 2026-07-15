@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "node --watch index.js",
-    "test": "node --test"
+    "start": "cross-env NODE_ENV=prouduction node index.js",
+    "dev": "cross-env NODE_ENV=development node --watch index.js",
+    "test": "cross-env NODE_ENV=test node --test"
   },
   "author": "Matija",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "cors": "^2.8.6",
+    "cross-env": "^10.1.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mongoose": "^9.7.4"
